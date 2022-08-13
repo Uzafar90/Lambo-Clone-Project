@@ -1,13 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Roboto&display=swap');
+
+* {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	overflow-y: scroll;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.heroImg {
+	background: rgba(0, 0, 0, 0.8) url(/src/Assets/model2.jpg);
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: darken;
+	width: 100%;
+	height: 100vh;
+}
+
+.bgClip {
+	clip-path: polygon(100% 0, 41% 67%, 100% 100%);
+	background-color: black;
+	height: 720px;
+	width: 70%;
 }
