@@ -1,19 +1,33 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import aboutImg from '../Assets/about.png';
 
 const About = () => {
 	return (
-		<div
+		<motion.div
 			className="w-full h-full bg-black pb-5  mx-auto  relative overflow-hidden lg:w-full lg:h-[1000px]"
 			id="about"
+			transition={{ staggerChildren: 0.5 }}
 		>
 			<div className="w-[90%] mx-auto">
 				<div className="hidden lg:flex lg:absolute right-0 lg:bg-[#ffffff] lg:h-[1000px] lg:w-[45%]"></div>
 				<div className="flex flex-col justify-center items-center lg:flex-row">
-					<h1 className="font-cinzel font-black text-[#bfbfbf7c] opacity-40 pt-4 pb-9 text-8xl md:text-[10rem] overflow-hidden lg:text-[30rem] lg:absolute top-36 left-4">
+					<motion.h1
+						className="font-cinzel font-black text-[#bfbfbf7c] opacity-40 pt-4 pb-9 text-8xl md:text-[10rem] overflow-hidden lg:text-[30rem] lg:absolute top-36 left-4"
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 0.5 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.5 }}
+					>
 						About
-					</h1>
-					<p className="font-roboto text-sm leading-6 text-[#D1D1D1] pb-5  md:text-base md:leading-7 lg:absolute lg:w-[40%] top-40 right-16 lg:text-xl lg:leading-9 lg:text-black">
+					</motion.h1>
+					<motion.p
+						className="font-roboto text-sm leading-6 text-[#D1D1D1] pb-5  md:text-base md:leading-7 lg:absolute lg:w-[40%] top-40 right-16 lg:text-xl lg:leading-9 lg:text-black"
+						initial={{ scale: 0, opacity: 0 }}
+						whileInView={{ scale: 1, opacity: 1 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.5, delay: 0.2 }}
+					>
 						Founded in 1963, Automobili Lamborghini is headquartered in
 						Sant’Agata Bolognese, in Northern Italy. Lamborghini currently
 						produces two super sports car models, the V12-powered Aventador,
@@ -30,17 +44,21 @@ const About = () => {
 						unique new hybrid technologies, featuring the world-first
 						application of a supercapacitor for hybridization, new materials
 						technology, and unsurpassed Lamborghini performance.
-					</p>
+					</motion.p>
 					<div className="lg:absolute -bottom-56 -left-96">
-						<img
+						<motion.img
 							src={aboutImg}
 							alt=""
 							className="overflow-hidden md:pb-20 lg:w-[100rem]"
+							initial={{ x: -200 }}
+							whileInView={{ x: 0 }}
+							viewport={{ once: true }}
+							transition={{ duration: 1 }}
 						/>
 					</div>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

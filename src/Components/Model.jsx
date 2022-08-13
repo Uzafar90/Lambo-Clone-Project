@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import avenImg from '../Assets/aventador.png';
 import huraImg from '../Assets/huracan.png';
@@ -14,15 +15,36 @@ const Model = () => {
 					L
 				</h1>
 				<div className="w-[90%] mx-auto">
-					<h1 className="font-cinzel font-black text-center text-[#bbbbbbaf] opacity-40 pt-4 pb-10 text-8xl md:text-[10rem] overflow-hidden lg:text-[25rem] lg:pb-24 lg:absolute lg:rotate-90 top-[35rem] -right-[32rem]">
+					<motion.h1
+						className="font-cinzel font-black text-center text-[#bbbbbbaf] opacity-40 pt-4 pb-10 text-8xl md:text-[10rem] overflow-hidden lg:text-[25rem] lg:pb-24 lg:absolute lg:rotate-90 top-[35rem] -right-[32rem]"
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 0.5 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.5 }}
+					>
 						Model
-					</h1>
-					<div className="flex flex-col justify-center items-center pb-20 gap-7 lg:gap-24">
+					</motion.h1>
+					<motion.div
+						className="flex flex-col justify-center items-center pb-20 gap-7 lg:gap-24"
+						transition={{ staggerChildren: 1 }}
+					>
 						<div className="flex flex-col justify-center items-center gap-5 lg:flex-row lg:w-full lg:gap-44">
-							<h1 className="font-cinzel font-bold text-4xl overflow-hidden lg:text-8xl">
+							<motion.h1
+								className="font-cinzel font-bold text-4xl overflow-hidden lg:text-8xl"
+								initial={{ x: -200 }}
+								whileInView={{ x: 0 }}
+								viewport={{ once: true }}
+								transition={{ duration: 1 }}
+							>
 								Aventador
-							</h1>
-							<p className="font-roboto text-sm leading-6 text-[#292929]  md:text-base md:leading-7 lg:w-[37%]  lg:text-xl lg:leading-9 ">
+							</motion.h1>
+							<motion.p
+								className="font-roboto text-sm leading-6 text-[#292929]  md:text-base md:leading-7 lg:w-[37%]  lg:text-xl lg:leading-9 "
+								initial={{ scale: 0, opacity: 0 }}
+								whileInView={{ scale: 1, opacity: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5, delay: 0.2 }}
+							>
 								Revolutionary thinking is at the heart of every idea from
 								Automobili Lamborghini. Whether it is aerospace-inspired design
 								or technologies applied to the naturally aspirated V12 engine or
@@ -32,10 +54,16 @@ const Model = () => {
 								for the super sports car sector. Giving a glimpse of the future
 								today, it comes from a family of supercars already considered
 								legendary.
-							</p>
+							</motion.p>
 						</div>
 						<div className=" flex flex-col gap-4 justify-center items-center overflow-hidden lg:gap-9 lg:pb-32">
-							<div className="flex justify-center items-center gap-7 md:gap-12 lg:gap-20">
+							<motion.div
+								className="flex justify-center items-center gap-7 md:gap-12 lg:gap-20"
+								initial={{ y: 200, opacity: 0 }}
+								whileInView={{ y: 0, opacity: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5 }}
+							>
 								<div className="flex flex-col justify-center items-center">
 									<p className="font-cinzel text-base md:text-lg lg:text-2xl">
 										Max Speed
@@ -60,23 +88,39 @@ const Model = () => {
 										770 cv
 									</span>
 								</div>
-							</div>
-							<img
+							</motion.div>
+							<motion.img
 								src={avenImg}
 								alt=""
 								className="overflow-hidden md:pb-20 lg:w-[100rem] z-10"
+								initial={{ y: -100, opacity: 0 }}
+								whileInView={{ y: 0, opacity: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5, delay: 0.5 }}
 							/>
 							<span className="font-cinzel text-sm md:text-base lg:text-xl md:-mt-20 lg:-mt-28">
 								Aventador lp 780-4 ultimae
 							</span>
 						</div>
-					</div>
+					</motion.div>
 					<div className="flex flex-col justify-center items-center pb-20 gap-7 lg:gap-24">
 						<div className="flex flex-col justify-center items-center gap-5 lg:flex-row-reverse lg:w-full lg:gap-44">
-							<h1 className="font-cinzel font-bold text-4xl overflow-hidden lg:text-8xl">
+							<motion.h1
+								className="font-cinzel font-bold text-4xl overflow-hidden lg:text-8xl"
+								initial={{ x: 200 }}
+								whileInView={{ x: 0 }}
+								viewport={{ once: true }}
+								transition={{ duration: 1 }}
+							>
 								Huracan
-							</h1>
-							<p className="font-roboto text-sm leading-6 text-[#292929]  md:text-base md:leading-7 lg:w-[37%]  lg:text-xl lg:leading-9 ">
+							</motion.h1>
+							<motion.p
+								className="font-roboto text-sm leading-6 text-[#292929]  md:text-base md:leading-7 lg:w-[37%]  lg:text-xl lg:leading-9 "
+								initial={{ scale: 0, opacity: 0 }}
+								whileInView={{ scale: 1, opacity: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5, delay: 0.2 }}
+							>
 								Discover all the new models of this exclusive car family,
 								created to shape to your deepest emotions. Combining the highest
 								expression of Lamborghini’s power with the exclusive refinement
@@ -88,10 +132,16 @@ const Model = () => {
 								better than taking in this beauty from a distance is actually
 								touching it. The finest Italian craftsmanship lavished on
 								finishes of unprecedented prestige and quality.
-							</p>
+							</motion.p>
 						</div>
 						<div className="flex flex-col gap-4 justify-center items-center overflow-hidden lg:gap-9 lg:pb-32">
-							<div className="flex justify-center items-center gap-7 md:gap-12 lg:gap-20">
+							<motion.div
+								className="flex justify-center items-center gap-7 md:gap-12 lg:gap-20"
+								initial={{ y: 200, opacity: 0 }}
+								whileInView={{ y: 0, opacity: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5 }}
+							>
 								<div className="flex flex-col justify-center items-center">
 									<p className="font-cinzel text-base md:text-lg lg:text-2xl">
 										Max Speed
@@ -116,11 +166,15 @@ const Model = () => {
 										470 cv
 									</span>
 								</div>
-							</div>
-							<img
+							</motion.div>
+							<motion.img
 								src={huraImg}
 								alt=""
 								className="overflow-hidden md:pb-20 lg:w-[100rem] z-10"
+								initial={{ y: -100, opacity: 0 }}
+								whileInView={{ y: 0, opacity: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5, delay: 0.5 }}
 							/>
 							<span className="font-cinzel text-sm md:text-base lg:text-xl md:-mt-20 lg:-mt-28">
 								Huracan STO
@@ -129,10 +183,22 @@ const Model = () => {
 					</div>
 					<div className="flex flex-col justify-center items-center pb-20 gap-7 lg:gap-24">
 						<div className="flex flex-col justify-center items-center gap-5 lg:flex-row lg:w-full lg:gap-44">
-							<h1 className="font-cinzel font-bold text-4xl overflow-hidden lg:text-8xl">
+							<motion.h1
+								className="font-cinzel font-bold text-4xl overflow-hidden lg:text-8xl"
+								initial={{ x: -200 }}
+								whileInView={{ x: 0 }}
+								viewport={{ once: true }}
+								transition={{ duration: 1 }}
+							>
 								Urus
-							</h1>
-							<p className="font-roboto text-sm leading-6 text-[#292929]  md:text-base md:leading-7 lg:w-[37%]  lg:text-xl lg:leading-9 ">
+							</motion.h1>
+							<motion.p
+								className="font-roboto text-sm leading-6 text-[#292929]  md:text-base md:leading-7 lg:w-[37%]  lg:text-xl lg:leading-9 "
+								initial={{ scale: 0, opacity: 0 }}
+								whileInView={{ scale: 1, opacity: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5, delay: 0.2 }}
+							>
 								Lamborghini Urus is the first Super Sport Utility Vehicle in the
 								world to merge the soul of a super sports car with the
 								functionality of an SUV. Powered by a 4.0-liter twin-turbo V8
@@ -141,10 +207,16 @@ const Model = () => {
 								mph. The design, performance, driving dynamics and driving
 								emotion flow effortlessly into this visionary approach to
 								Lamborghini DNA.
-							</p>
+							</motion.p>
 						</div>
 						<div className="flex flex-col gap-4 justify-center items-center overflow-hidden lg:gap-9 ">
-							<div className="flex justify-center items-center gap-7 md:gap-12 lg:gap-20">
+							<motion.div
+								className="flex justify-center items-center gap-7 md:gap-12 lg:gap-20"
+								initial={{ y: 200, opacity: 0 }}
+								whileInView={{ y: 0, opacity: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5 }}
+							>
 								<div className="flex flex-col justify-center items-center">
 									<p className="font-cinzel text-base md:text-lg lg:text-2xl">
 										Max Speed
@@ -169,11 +241,15 @@ const Model = () => {
 										650 cv
 									</span>
 								</div>
-							</div>
-							<img
+							</motion.div>
+							<motion.img
 								src={urusImg}
 								alt=""
 								className="overflow-hidden md:pb-20 lg:w-[100rem] z-10"
+								initial={{ y: -100, opacity: 0 }}
+								whileInView={{ y: 0, opacity: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5, delay: 0.5 }}
 							/>
 							<span className="font-cinzel text-sm md:text-base lg:text-xl md:-mt-20 lg:-mt-28">
 								Urus Graphite Capsule
