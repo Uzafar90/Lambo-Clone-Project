@@ -14,7 +14,7 @@ to own one.
 This project was created on a VScode macOS platform but should work on other systems.
 
 - Tested on VScode macOS
-- React, JSX, CSS, Aos animation, React Router v6.
+- React, JSX, Tailwindcss, frammer motion, React Router v6.
 - node v18.2.0 and npm 8.10.0
 
 ### Installation
@@ -22,22 +22,23 @@ This project was created on a VScode macOS platform but should work on other sys
 Install lamborghini_clone with npm
 
 ```bash
-  npm install lamborghini_clone
+  npm install lambo-clone-project
   cd react-projects
 
   npm start
 ```
 
-Install react router with npm
+Install framer motion animation with npm
 
 ```bash
-  $ npm install react-router-dom@6
+    npm install framer-motion
 ```
 
-Install aos animation with npm
+Install Tailwind CSS with npm 
 
 ```bash
-    npm install aos --save
+    npm install -D tailwindcss
+    npx tailwindcss init
 ```
 
 #### Thank you!!!!
